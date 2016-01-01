@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Prokopenko Dmytro">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PP</title>
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="img/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#009688" />
+  <meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="img/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="img/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="img/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="img/mstile-310x310.png" />
+  <meta name="theme-color" content="#009688">
+  <meta name="msapplication-navbutton-color" content="#009688">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
+  <link rel="stylesheet" href="styles.css">
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="wall">
+    <div class="menu">
+      <div name="menuicon" class="menuicon" onclick="menu()">
+        <img width="35px" src="img/menu.svg" alt="menuicon" />
+      </div>
+      <nav>
+        <ul>
+          <a href="#">
+            <li>ПІДРАХУНОК ПРОГУЛІВ</li>
+          </a>
+          <a href="#">
+            <li>ПІДРАХУНОК ТЕМАТИЧНОЇ</li>
+          </a>
+          <a href="#">
+            <li>ПІДРАХУНОК СЕМЕСТРОВОЇ</li>
+          </a>
+          <a href="#">
+            <li>ПІДРАХУНОК 0000000000</li>
+          </a>
+          <a href="https://github.com/Porreh" target="_blank">
+            <li>GITHUB</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="bottom">
+        <p>Copyright © 2016 PROKOPENKO DMYTRO. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="result">
+      <div class="resultclose">
+        <img src="img/cancel.svg" alt="cancel" />
+      </div>
+      <article class="resultall">
+        <p>УСІ ПРОГУЛИ</p>
+        <p class="resnum" name="resultall"></p>
+      </article>
+      <article class="resulttheory">
+        <p>ПРОГУЛИ НА ТЕОРІЇ</p>
+        <p class="resnum" name="resulttheory"></p>
+      </article>
+      <article class="resultpractice">
+        <p>ПРОГУЛИ НА ПРАКТИЦІ</p>
+        <p class="resnum" name="resultpractice"></p>
+      </article>
+    </div>
+  </div>
+  <main>
+    <div class="app">
+      <div class="header">
+        <h3 class="appname">ПІДРАХУНОК ПРОГУЛІВ</h3>
+      </div>
+      <div class="info">
+        <p>Додаток для швидкого рахування пропусків учнів.</p>
+        <p>Обов’язково мають буті заповнені два поля!!</p>
+      </div>
+      <form class="choosepractice">
+        <p>ВИД ПРАКТИКИ:</p>
+        <select class="setpractice">
+          <option value="1" selected>ВИРОБНИЧЕ НАВЧАННЯ</option>
+          <option value="2">ВИРОБНИЧА ПРАКТИКА</option>
+          <option value="3">ПРАКТИКА НА ПІДПРИЕМСТВІ</option>
+        </select>
+      </form>
+      <form class="inputmark">
+        <input type="number" name="al" placeholder="УСІ ПРОГУЛИ" autocomplete="off" autofocus required>
+        <input type="number" name="th" placeholder="НА ТЕОРІЇ" autocomplete="off">
+        <input type="number" name="pr" placeholder="НА ПРАКТИЦІ" autocomplete="off">
+      </form>
+      <div class="footer">
+        <div class="submit" onclick="init()">
+          <img class="go" src="img/go.svg" alt="go" />
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
