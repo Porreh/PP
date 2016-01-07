@@ -1,9 +1,13 @@
+"use strict";
+
 function pp() {
-  var THEORY = 7;
+  const THEORY = 7;
   var PRACTICE;
 
+  document.querySelector('.resultclose').addEventListener("click", closeResults);
+
   function setPractice() {
-    var a = document.querySelector('.setpractice').value;
+    let a = document.querySelector('.setpractice').value;
     if (a === "1") {
       PRACTICE = 6;
     } else {
@@ -12,7 +16,7 @@ function pp() {
   }
 
   function calculateSecondArgument(x, y, z) {
-    var r = [x, y, z];
+    let r = [x, y, z];
     switch (true) {
       case isNaN(x):
         r[0] = y + z;
@@ -35,9 +39,9 @@ function pp() {
   }
 
   function outputResult(a, b, c) {
-    var r = [a, b, c];
-    var n = ["[name=\"resultall\"]", "[name=\"resulttheory\"]", "[name=\"resultpractice\"]"];
-    for (var i = 0; i < n.length; i++) {
+    let r = [a, b, c];
+    let n = ["[name=\"resultall\"]", "[name=\"resulttheory\"]", "[name=\"resultpractice\"]"];
+    for (let i = 0; i < n.length; i++) {
       document.querySelector(n[i]).innerHTML = r[i];
     }
     openResults();
@@ -45,8 +49,8 @@ function pp() {
 
   function closeResults() {
     document.querySelector('.result').style.transform = "scale(0,0)";
-    var n = ["[name=\"al\"]", "[name=\"th\"]", "[name=\"pr\"]"];
-    for (var i = 0; i < n.length; i++) {
+    let n = ["[name=\"al\"]", "[name=\"th\"]", "[name=\"pr\"]"];
+    for (let i = 0; i < n.length; i++) {
       document.querySelector(n[i]).value = '';
     }
   }
@@ -56,7 +60,7 @@ function pp() {
   }
 
   function menu() {
-    var a = document.querySelector('.app');
+    let a = document.querySelector('.app');
     if (a.hasAttribute("style")) {
       a.removeAttribute("style");
     } else {
@@ -66,19 +70,19 @@ function pp() {
 
   function initFunction() {
     setPractice();
-    var x, y, z;
-    x = parseInt(document.querySelector('[name="al"]').value, 10);
-    y = parseInt(document.querySelector('[name="th"]').value, 10);
-    z = parseInt(document.querySelector('[name="pr"]').value, 10);
+    let x, y, z;
+    x = parseInt(document.querySelector('[name="al"]').value);
+    y = parseInt(document.querySelector('[name="th"]').value);
+    z = parseInt(document.querySelector('[name="pr"]').value);
     calculateSecondArgument(x, y, z);
   }
-
   initFunction();
-  document.querySelector('.resultclose').addEventListener("click", closeResults);
 }
 
+
+
 function menu() {
-  var a = document.querySelector('.app');
+  let a = document.querySelector('.app');
   if (a.hasAttribute("style")) {
     a.removeAttribute("style");
   } else {

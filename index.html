@@ -6,6 +6,7 @@
   <meta name="author" content="Prokopenko Dmytro">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PP</title>
+  <!-- VERSION: 1.2 -->
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
@@ -29,11 +30,11 @@
   <meta name="theme-color" content="#009688">
   <meta name="msapplication-navbutton-color" content="#009688">
   <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.min.css">
   <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  <script src="main.js"></script>
+  <script src="main.min.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
             <li>ПІДРАХУНОК СЕМЕСТРОВОЇ</li>
           </a>
           <a href="#">
-            <li>ПІДРАХУНОК 0000000000</li>
+            <li>ПІДРАХУНОК</li>
           </a>
           <a href="https://github.com/Porreh" target="_blank">
             <li>GITHUB</li>
@@ -106,7 +107,7 @@
         <input type="number" name="pr" placeholder="НА ПРАКТИЦІ" autocomplete="off">
       </form>
       <div class="footer">
-        <div class="submit" onclick="init()">
+        <div class="submit" onclick="pp()">
           <img class="go" src="img/go.svg" alt="go" />
         </div>
       </div>
