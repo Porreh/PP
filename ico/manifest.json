@@ -38,7 +38,7 @@
 			"density": 4
 		}
 	],
-	"start_url": "index.html",
+	"start_url": "http://porreh.github.io/PP/index.html",
 	"display": "standalone",
 	"orientation": "portrait"
 }
